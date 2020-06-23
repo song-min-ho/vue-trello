@@ -1,11 +1,15 @@
 <template>
     <div>
-        home
+        Home
     </div>    
 </template>
 
-
 <script>
-export defalut
+export default{
+    
+}
 </script>
-style
+
+<style>
+
+</style>
