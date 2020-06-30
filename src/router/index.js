@@ -3,7 +3,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router' /*npm i vue-router --save*/
 import Home from '../components/Home.vue'
 import Login from '../components/Login.vue'
+import Board from '../components/Board.vue'
+import Card from '../components/Card.vue'
 import Notfound from '../components/Notfound.vue'
+
 
 Vue.use(VueRouter) /*미들웨어 (import하고 이거도 추가해줘야함)*/
 
@@ -17,6 +20,9 @@ const router = new VueRouter({
     routes: [ /*행렬*/
         { path: '/', component: Home },
         { path: '/login', component: Login },
+        { path: '/b/:bid', component: Board, children: [   /*콜론 넣어주면 bid라는 변수로 받을수있음(정수)*/
+            { path: 'c/:cid', component: Card } /*이렇게 자식으로 해주는걸 중첩라우팅이라고 한다.*/
+        ] }, 
         { path: '*', component: Notfound } /* 위에 두 경로가 아니면 '*'이 열림 */
     ] 
 })
