@@ -7,7 +7,6 @@ import Board from '../components/Board.vue'
 import Card from '../components/Card.vue'
 import Notfound from '../components/Notfound.vue'
 
-
 Vue.use(VueRouter) /*미들웨어 (import하고 이거도 추가해줘야함)*/
 
 /*
